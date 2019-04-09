@@ -2,13 +2,13 @@ package com.myrev.rp.engine;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.util.Collections;
-import java.util.LinkedList;
+import java.util.Arrays;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.Set;
 
 import com.myrev.rp.jobs.DataLoader;
+import com.myrev.rp.lu.dm.Line;
 import com.myrev.rp.lu.dm.UndergroundMap;
 
 //import com.fdm.routeplanner.data.LineDataReader;
@@ -65,6 +65,9 @@ public class RouteMapReader
     }	
 
 	
+	// new Line("Piccadilly", "dark blue")     new Line("", "")
+	
+	
 	/*
 	 UndergroundMap implements IRouteMap
 {
@@ -80,6 +83,13 @@ public class RouteMapReader
 	
 	// TODO TMP SOLUTION!!!1
 	private Map<String,String> dummyGetLondonUndergroundMap() {
+		
+		List<IPath> lineList = Arrays.asList(new Line("Piccadilly", "dark blue"),
+											new Line("Victoria", "light blue"),
+											new Line("District", "green"));
+		Map<String,String> ugMap = new HashMap<String,String>();
+		
+		
 		
 		
 		

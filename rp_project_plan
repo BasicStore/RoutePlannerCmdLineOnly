@@ -1,0 +1,92 @@
+
+----------------------------------------------------
+STAGE 1: UPDATE CORE ROUTE FINDER CODE
+
+- get the old actual routefinder functionality working from the 
+  command line
+
+- identify tests, improvements and j8 constructs and other
+  work that needs doing
+
+- implement updates
+
+----------------------------------------------------
+STAGE 2: DESIGN 
+
+- setup MySQL database
+
+- determine page flow of extended version
+  - shopping cart functionality
+  - admin corner
+
+- map functionality, logic and conditions at each step
+
+- document features and areas of extension:
+  - motorway network
+  - alternative to Djikstra
+  - different info from 
+  - new input formats etc
+    
+----------------------------------------------------
+STAGE 3: SHELLS
+
+- Struts 2 / Spring Boot
+- Spring MVC 5 / Spring Boot
+- Vaadin v7?
+
+- spring security for login and role based authority
+- basic navigation to all pages with html text description
+- logging setup to project folder
+- database connectivity setup
+- properties files access
+- internationalization
+- validation
+- test stubs
+- initial javadocs
+- css + js plugged in
+- threadpools for jobs
+- profiling utility of some sort
+
+----------------------------------------------------
+STAGE 4: STRUCTURAL IMPLEMENTATION
+
+Get the apps working - ugly but fully functionality
+
+- Struts 2 / Spring Boot
+- Spring MVC 5 / Spring Boot
+- Vaadin v7?
+
+----------------------------------------------------
+STAGE 5: BEAUTIFY
+
+- update knowledge of HTML5, CSS, JQuery, javascript 
+- create 3 different front end themes and designs
+- update the application front ends
+
+----------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
