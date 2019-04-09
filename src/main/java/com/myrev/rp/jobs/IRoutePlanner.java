@@ -75,6 +75,9 @@ public interface IRoutePlanner
 	    
 	    
 	    public List<String> getIRouteMap();
-	    	    
+
+	    
+	    void checkInput(String start, String destination) throws NoJourneyFoundException, 
+        		InvalidStationException, DuplicateStationException;
 		
 }

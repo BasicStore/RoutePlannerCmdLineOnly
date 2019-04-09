@@ -15,21 +15,13 @@ import com.myrev.rp.engine.IRouteMap;
 import com.myrev.rp.ex.DuplicateStationException;
 import com.myrev.rp.ex.InvalidStationException;
 import com.myrev.rp.ex.NoJourneyFoundException;
-
-//import com.fdm.routePlanner.businessObject.Edge;
-//import com.fdm.routePlanner.businessObject.Journey;
-//import com.fdm.routePlanner.businessObject.Route;
-//import com.fdm.routePlanner.exception.DuplicateStationException;
-//import com.fdm.routePlanner.exception.InvalidStationException;
-//import com.fdm.routePlanner.exception.NoJourneyFoundException;
-//import com.fdm.seminar.routeplanner.engine.DijkstraRouteEnquiry;
-//import com.fdm.seminar.routeplanner.engine.INode;
-//import com.fdm.seminar.routeplanner.engine.IRouteEnquiry;
-//import com.fdm.seminar.routeplanner.engine.IRouteMap;
+import org.apache.log4j.Logger;
 
 
 public class RoutePlanner implements IRoutePlanner 
 {
+	final static Logger logger = Logger.getLogger(RoutePlanner.class);
+	
 	private IRouteEnquiry dijkstra;
 	private ReadPredecessors predReader;
 	private EnquiryOutput enquiryOutput;
@@ -46,6 +38,8 @@ public class RoutePlanner implements IRoutePlanner
 	    predReader = new ReadPredecessors(iRouteMap,dijkstra);
 	    legMaker = new LegOrchestrator(iRouteMap);
 	    enquiryOutput = new EnquiryOutput();
+	    
+	    logger.info("Route Planner has been set up successfully......");
 	}
 	
 	
