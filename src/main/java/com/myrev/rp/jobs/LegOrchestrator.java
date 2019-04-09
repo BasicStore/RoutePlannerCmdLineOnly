@@ -1,7 +1,6 @@
 package com.myrev.rp.jobs;
 import java.util.LinkedList;
 import java.util.List;
-
 import com.myrev.rp.dm.Edge;
 import com.myrev.rp.dm.Journey;
 import com.myrev.rp.dm.Route;
@@ -9,23 +8,12 @@ import com.myrev.rp.engine.INode;
 import com.myrev.rp.engine.IPath;
 import com.myrev.rp.engine.IRouteMap;
 
-//import com.fdm.routePlanner.businessObject.Edge;
-//import com.fdm.routePlanner.businessObject.Journey;
-//import com.fdm.routePlanner.businessObject.Route;
-//import com.fdm.seminar.routeplanner.engine.INode;
-//import com.fdm.seminar.routeplanner.engine.IPath;
-//import com.fdm.seminar.routeplanner.engine.IRouteMap;
 
-
-
-
-
-// 1) Organises data in leg format, and stores that in Journey
-//    alongside the detailed edges 
-// 2) Removes routes with too many objects from Journey object
+// - Organises data in leg format, ie. for each succession of nodes on an IPath, and stores that in a Journey
+//    against the detailed edges 
+// - Removes routes with too many objects from Journey object
 public class LegOrchestrator 
 {
-
 	private List<Edge> edgeList; 
 	private List<Edge> legData;
 	private int endIndex;
@@ -35,6 +23,9 @@ public class LegOrchestrator
 	private int journeyDistance;
 	private INode startLeg;
 	private IRouteMap iRouteMap;
+	
+
+	// TODO refactor
 	
 	
 	public LegOrchestrator(IRouteMap iRouteMap)
@@ -134,23 +125,6 @@ public class LegOrchestrator
 		}
 		journey.setRouteList(newRouteList);
 	}
-	
-	
-	
-	
-	
-	
-	
-
-	
-	
-	
-	
-	
-
-	
-	
-	
 	
 	
 	

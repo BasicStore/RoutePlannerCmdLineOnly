@@ -2,21 +2,9 @@ package com.myrev.rp.ex;
 
 public class DuplicateStationException extends Exception
 {
-	private String message;
-	
-	public DuplicateStationException()
+	public DuplicateStationException(String msg)
 	{
-		super("Duplicate Station Exception...");
+		super(msg);
 	}
-	
-	public DuplicateStationException(String message)
-	{
-		super("Duplicate Station Exception...");
-		this.message = message;
-	}
-	
-	
-	
-	
 	
 }

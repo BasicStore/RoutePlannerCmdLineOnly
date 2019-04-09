@@ -15,17 +15,12 @@ import com.myrev.rp.lu.dm.UndergroundMap;
 
 public class RouteMapReader 
 {
-	
-	
 	public RouteMapReader() 
 	{
 		
-		
-		
 	}
-
 	
-	
+// TODO IS THIS STILL NECESSARY FOR THE WEB VERSION????	
 //	public IRouteMap buildIRouteMap(String relativeLibraryFolder, String filename) throws FileNotFoundException, 
 //	                                                                 InvalidNetWorkException, IOException
 //	{
@@ -41,34 +36,23 @@ public class RouteMapReader
 //	}
 	
 	
-	
-	
 	public IRouteMap buildIRouteMap(String path) throws FileNotFoundException, InvalidNetworkException, IOException
     {                                                          
 		File file = new File(path);
 		FactoryINode factory = new FactoryINode();
 		IRouteMap iRouteMap = new UndergroundMap();
-		
-		// TODO OFFENDING LINE
 		LineDataReader reader = new LineDataReader();
-		
-		
-		
 		Map<String,String> xmlFile = reader.getNetworkData(file);
-		
-		
-		
 		DataLoader loader = new DataLoader(xmlFile,iRouteMap,factory);
 		loader.loadIRouteMap();
 		return iRouteMap;
     }	
-
 	
 	
-	
+	// TODO refactor
 	public List<String> getListAllStations(IRouteMap iRouteMap)
 	{
-		LinkedList stationList = new LinkedList();
+		List stationList = new LinkedList();
 		Map<String,INode> stations = iRouteMap.getINodes(); 
 		Set<String> keySet = stations.keySet();
 		for (String key : keySet)
@@ -79,9 +63,6 @@ public class RouteMapReader
 		Collections.sort(stationList);
 		return stationList;
 	}
-	
-	
-	
 	
 	
 }

@@ -1,13 +1,8 @@
 package com.myrev.rp.lu.dm;
 import java.util.LinkedList;
-//import com.fdm.routePlanner.businessObject.*;
-//import com.fdm.seminar.routeplanner.engine.*;
-//import com.fdm.seminar.routeplanner.london_ug.*;
 import java.util.List;
-
 import com.myrev.rp.dm.Edge;
 import com.myrev.rp.engine.INode;
-
 
 
 public class Station implements INode

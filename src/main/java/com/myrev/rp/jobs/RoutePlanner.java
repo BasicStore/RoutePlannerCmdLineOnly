@@ -29,8 +29,6 @@ public class RoutePlanner implements IRoutePlanner
 	private Journey journey;
 	private IRouteMap iRouteMap;
 	
-	
-	
 	public RoutePlanner(IRouteMap iRouteMap) throws IOException 
 	{
 		this.iRouteMap = iRouteMap;
@@ -38,14 +36,14 @@ public class RoutePlanner implements IRoutePlanner
 	    predReader = new ReadPredecessors(iRouteMap,dijkstra);
 	    legMaker = new LegOrchestrator(iRouteMap);
 	    enquiryOutput = new EnquiryOutput();
-	    
 	    logger.info("Route Planner has been set up successfully......");
 	}
 	
 	
+	// TODO refactor
 	public List<String> getIRouteMap()
 	{
-		LinkedList stationList = new LinkedList();
+		List stationList = new LinkedList();
 		Map<String,INode> stations = iRouteMap.getINodes(); 
 		
 		Set<String> keySet = stations.keySet();
@@ -60,17 +58,10 @@ public class RoutePlanner implements IRoutePlanner
 	
 	
 	
-	
-	
-	
 	public String getJourneyString(Journey journey)
 	{
 		return enquiryOutput.getJourneyOutput(journey, false);
 	}
-	
-	
-	
-	
 	
 	
 	public String getJourneyString(Journey journey, boolean htmlPage)
@@ -80,27 +71,23 @@ public class RoutePlanner implements IRoutePlanner
 	
 	
 	
-	
-	
-	
 	public void checkInput(String start, String destination) throws NoJourneyFoundException, 
 	                                                   InvalidStationException, DuplicateStationException
 	{
-		if(start.equals("")  ||  destination.equals(""))
+		if (start.equals("")  ||  destination.equals(""))
 		{
 			 throw new InvalidStationException("Either the start or destination is not an actual station. Please try again.");
 		}
-		if(start.equals(destination))
+		
+		if (start.equals(destination))
 		{
-			throw new InvalidStationException("The start and destination should be different. Please try again.");
+			throw new DuplicateStationException("The start and destination should be different. Please try again.");
 		}
 	}
 	
 	
 	
-	
-	
-	/** NOW          execute(INode start, INode destination)
+	/** 
      * By entering a valid start station and destination station an intelligent
      * journey object is returned.
      * @throws InvalidStationException - if the station does not exist within the network
@@ -123,8 +110,6 @@ public class RoutePlanner implements IRoutePlanner
 	}
 	
 	
-	
-	
 		
 	/**
 	 * Clears any previous journeys
@@ -137,8 +122,7 @@ public class RoutePlanner implements IRoutePlanner
 	
 	
 	
-	
-/**  LATER
+	/** 
 	 * Each shortest route is determined and the number of line changes for all routes is returned
 	 * n.b this method is only here in tribute to Dijkstra - it serves no purpose really
 	 * @throws NoJourneyFoundException - if the routePlanner can find no routes between to stations
@@ -161,7 +145,7 @@ public class RoutePlanner implements IRoutePlanner
      
      
 	
-    /** LATER
+    /** 
      * Gets the number of possible routes between two stations
      * @throws NoJourneyFoundException - if the routePlanner can find no routes between to stations
      * @return int - Number of routes found having equal shortest distances between start station and 
@@ -172,7 +156,6 @@ public class RoutePlanner implements IRoutePlanner
 		List<Route> routeList = journey.getRouteList();
 		return routeList.size();
     }
-
     
     
     
@@ -188,8 +171,6 @@ public class RoutePlanner implements IRoutePlanner
 		List<Edge> edgeList = route.getEdgeList();
 		return edgeList.size();
 	}
-
-    
 	
     
 }

@@ -12,7 +12,6 @@ import com.myrev.rp.lu.dm.Neighbour;
 
 public class DataLoader 
 {
- 
 	private Map xmlFile;
 	private FactoryINode factory;
 	private Map uniqueNodeMap;
@@ -36,7 +35,7 @@ public class DataLoader
 	}
 	
 	
-	
+	// TODO refactor
 	// populates uniqueNodeMap with all shallow INode objects (no neighbours at this stage)
 	private void createShallowINodes()
 	{
@@ -60,7 +59,7 @@ public class DataLoader
 	}
 
 	
-	
+	// TODO refactor
 	// creates and records the nodes for one line
 	private void readOneLineOfNodes(List iNodeXMLList)
 	{
@@ -77,7 +76,7 @@ public class DataLoader
 	
 	
 	
-	
+	// TODO refactor
 	// set the neighbours for each node, based on their positions in lines
 	// as read from the XML file
 	private void populateNodeNeighbours(boolean biDirectional)
@@ -127,6 +126,8 @@ public class DataLoader
 	}
 	
 	
+	
+	// TODO refactor
 	private boolean neighbourAlreadyExistsOnThisLine(INode source, INode inNode, IPath line)
 	{
 		List<Neighbour> neighbourList = source.getNeighbourList();
@@ -141,9 +142,6 @@ public class DataLoader
 		return false;
 	}
 	
-	
-	
-
 	
 }
 	

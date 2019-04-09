@@ -2,18 +2,9 @@ package com.myrev.rp.ex;
 
 public class NoJourneyFoundException extends Exception
 {
-	String message;
-	
-	public NoJourneyFoundException()
+	public NoJourneyFoundException(String msg)
 	{
-		super("No Journey Found Exception");
+		super(msg);
 	}
-	
-	public NoJourneyFoundException(String message)
-	{
-		super("No Journey Found Exception");
-		this.message = message;
-	}
-	
 	
 }

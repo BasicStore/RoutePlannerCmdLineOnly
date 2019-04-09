@@ -7,23 +7,15 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
-
 import javax.xml.parsers.SAXParser;
 import javax.xml.parsers.SAXParserFactory;
-
 import org.jdom2.Document;
 import org.jdom2.Element;
 import org.jdom2.JDOMException;
 import org.jdom2.input.SAXBuilder;
-//import org.jdom.Document;
-//import org.jdom.Element;
-//import org.jdom.JDOMException;
-//import org.jdom.input.SAXBuilder;
 import org.xml.sax.Attributes;
 import org.xml.sax.SAXException;
 import org.xml.sax.helpers.DefaultHandler;
-
-//import com.fdm.routeplanner.data.exception.InvalidNetWorkException;
 import com.myrev.rp.ex.InvalidNetworkException;
 
 
@@ -33,7 +25,7 @@ import com.myrev.rp.ex.InvalidNetworkException;
  * Parses either single line of station information (using getLineData()) or
  * complete network data file (using getNetworkData()).
  *
- * @author stuartj
+ * @author stuartj [Class included with InvalidNetworkException in original RoutePlanner.jar exercise]
  */
 public class LineDataReader extends DefaultHandler {
 

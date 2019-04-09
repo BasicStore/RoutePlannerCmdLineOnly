@@ -1,10 +1,9 @@
 package com.myrev.rp.dm;
-import java.util.LinkedList;
 import java.util.List;
 
 public class Journey 
 {
-	List<Route> routeList; 
+	private List<Route> routeList; 
 	
 	public Journey(List<Route> routeList)
 	{
@@ -12,6 +11,7 @@ public class Journey
 	}
 	
 	
+	// TODO refactor
 	public int getMinChanges()
 	{
 		int minSoFar = Integer.MAX_VALUE;
@@ -29,7 +29,7 @@ public class Journey
 	
 	
 	
-	
+	// TODO refactor
 	public String toString()
 	{
 		String output = "";
@@ -41,10 +41,6 @@ public class Journey
 		
 		return output;
 	}
-	
-	
-	
-	
 	
 	public void addRoute(Route route)
 	{

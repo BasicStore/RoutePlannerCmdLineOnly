@@ -1,15 +1,17 @@
 package com.myrev.rp.engine;
-import java.util.List;
 
 
 public interface IPath 
 {
 	public String getPathRoute();
+
 	public void setPathInfo(String routeInfo);
-	public String getPathName(); 
-	public void setPathName(String lineName); 
-	public boolean equals(String pathName,String pathRoute);
 	
+	public String getPathName(); 
+	
+	public void setPathName(String lineName); 
+	
+	public boolean equals(String pathName,String pathRoute);
 	
 }
 

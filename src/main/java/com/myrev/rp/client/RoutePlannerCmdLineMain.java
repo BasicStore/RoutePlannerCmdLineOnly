@@ -13,13 +13,17 @@ import com.myrev.rp.ex.InvalidStationException;
 import com.myrev.rp.ex.NoJourneyFoundException;
 import com.myrev.rp.jobs.IRoutePlanner;
 import com.myrev.rp.jobs.RoutePlanner;
+import java.util.ResourceBundle;
 
 
 public class RoutePlannerCmdLineMain {
 
 	final static Logger logger = Logger.getLogger(RoutePlannerCmdLineMain.class);
 	
+	final static ResourceBundle mybundle = ResourceBundle.getBundle("application");
+	
 	public RoutePlannerCmdLineMain() {
+		
 		
 	}
 
@@ -88,8 +92,7 @@ public class RoutePlannerCmdLineMain {
 	
 	public IRouteMap loadSystemData() throws IOException, FileNotFoundException, InvalidNetworkException {
 		RouteMapReader reader = new RouteMapReader();
-		return reader.buildIRouteMap("LondonTube.xml");
+		return reader.buildIRouteMap(mybundle.getString("route.map.xml"));
 	}
-	
 
 }

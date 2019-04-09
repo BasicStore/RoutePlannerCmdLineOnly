@@ -1,8 +1,7 @@
 package com.myrev.rp.jobs;
-//import com.fdm.routePlanner.businessObject.*;
-//import com.fdm.seminar.routeplanner.engine.*;
 import java.util.List;
 
+import org.apache.commons.lang3.StringUtils;
 import com.myrev.rp.dm.Edge;
 import com.myrev.rp.dm.Journey;
 import com.myrev.rp.dm.Route;
@@ -11,38 +10,27 @@ import com.myrev.rp.engine.IPath;
 
 public class EnquiryOutput 
 {
-	
 	public EnquiryOutput()
 	{
 		
 	}
 	
 	
-	
-	
 	protected String getJourneyOutput(Journey journey, boolean htmlPage)
 	{
-		String output = "";
+		String output = StringUtils.EMPTY;
 		List<Route> routeList = journey.getRouteList();
+		
 		for (int i = 0; i < routeList.size(); i++)
 		{
 			Route route = routeList.get(i);
-			if (htmlPage)
-			{
-				output += getRouteOutputForWeb(route);
-			}
-			else
-			{
-				output += getRouteOutput(route);
-			}
+			output += htmlPage ? getRouteOutputForWeb(route) :  getRouteOutput(route);
 		}
 		return output;
 	}
 	
 	
-	
-	
-	
+	// TODO refactor
 	private String getRouteOutput(Route route)
 	{
 		String output = "";
@@ -64,9 +52,7 @@ public class EnquiryOutput
 	
 	
 	
-	
-	
-	
+	// TODO refactor
 	private String getRouteOutputForWeb(Route route)
 	{
 		String output = "";
@@ -88,10 +74,7 @@ public class EnquiryOutput
 	
 	
 	
-	
-	
-	
-	
+	// TODO refactor
 	private String getLegOutput(Edge leg)
 	{
 		INode start = leg.getStart();

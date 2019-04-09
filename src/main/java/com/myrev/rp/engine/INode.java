@@ -6,7 +6,6 @@ import com.myrev.rp.lu.dm.Neighbour;
 
 public interface INode 
 {
-	
 	// TODO obvious issues here:  Edge and Neighbour make no sense in this interface - resolve this 
 	
 	// TODO ultimately move this interface to com.myrev.rp.dm 

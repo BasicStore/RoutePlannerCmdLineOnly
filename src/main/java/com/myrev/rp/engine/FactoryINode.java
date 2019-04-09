@@ -1,8 +1,6 @@
 package com.myrev.rp.engine;
 import com.myrev.rp.lu.dm.Station;
 
-//import com.fdm.seminar.routeplanner.london_ug.Station;
-
 
 public class FactoryINode 
 {
@@ -19,17 +17,7 @@ public class FactoryINode
 	
 	public INode makeINode(int iNodeType, String iNodeName)
 	{
-		if (iNodeType == STATION)
-		{
-			return new Station(iNodeName);
-		}
-		
-		return null;
-		
+		return iNodeType == STATION ? new Station(iNodeName) : null;
 	}
-	
-	
-	
-	
 	
 }

@@ -1,34 +1,12 @@
-
-
 ---------------------------------------------------------------
+
 1) INPUT DATA: LOAD UNDERGROUND MAP DATA 
 
-Create Map:
-
-
----------------------------------------------------------------
 2) GET USER INPUT
 
-
-
-
----------------------------------------------------------------
 3) CALCULATE AND RETRIEVE THE SHORTEST ROUTE OPTIONS
 
-Create new Dijkstra:
---> DijkstraRouteEnquiry(IRouteMap map)
-
-Execute search:
---> dijk.execute(INode start, INode destination)
-
-Get results:
---> dijk.getPredecessorList(INode destination)
-    // RETURNS LIST OF EDGES:  List<Edge>  [should be IPaths!!!!]
-
----------------------------------------------------------------
 4) DISPLAY RESULTS TO USER
-
-
 
 ---------------------------------------------------------------
 

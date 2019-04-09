@@ -1,9 +1,5 @@
 package com.myrev.rp.jobs;
 import java.util.LinkedList;
-//import com.fdm.seminar.routeplanner.london_ug.*;
-//import com.fdm.seminar.routeplanner.engine.*;
-//import com.fdm.routePlanner.businessObject.*;
-//import com.fdm.routePlanner.exception.NoJourneyFoundException;
 import java.util.List;
 import com.myrev.rp.dm.Edge;
 import com.myrev.rp.dm.Route;
@@ -12,7 +8,6 @@ import com.myrev.rp.engine.IPath;
 import com.myrev.rp.engine.IRouteEnquiry;
 import com.myrev.rp.engine.IRouteMap;
 import com.myrev.rp.ex.NoJourneyFoundException;
-
 
 
 public class ReadPredecessors 
@@ -32,8 +27,6 @@ public class ReadPredecessors
 		cloneReserve = new LinkedList();
 		clearBuildRouteTools();
 	}	
-	
-	
 	
 
 	
@@ -57,8 +50,6 @@ public class ReadPredecessors
 	}
 	
 	
-	
-	
 	public void generateRoutes(INode start, INode finalDest) throws NoJourneyFoundException
 	{
 		clearBuildRouteTools();
@@ -75,13 +66,11 @@ public class ReadPredecessors
 	        } 
 	    }  
 	}
-
 	
 	
 	
 	private void firstBuildStage(INode finalDest, INode start) throws NoJourneyFoundException
 	{
-	    // List<Edge> predList = dijkstra.getPredecessorList(finalDest);
 		List<INode> predList = dijkstra.getPredecessorList(finalDest);
 		for (int i = 0; i < predList.size(); i++)
 	    {

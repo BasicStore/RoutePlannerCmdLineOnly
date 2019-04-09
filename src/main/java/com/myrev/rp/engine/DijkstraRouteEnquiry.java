@@ -10,12 +10,6 @@ import java.util.Set;
 import com.myrev.rp.dm.Edge;
 import com.myrev.rp.ex.NoJourneyFoundException;
 import com.myrev.rp.lu.dm.Neighbour;
-//import com.fdm.routePlanner.businessObject.Edge;
-//import com.fdm.routePlanner.businessObject.Route;
-//import com.fdm.routePlanner.exception.*;
-//import com.fdm.seminar.routeplanner.london_ug.Neighbour;
-//import com.fdm.seminar.routeplanner.london_ug.Station;
-
 
 
 public class DijkstraRouteEnquiry implements IRouteEnquiry
@@ -40,7 +34,6 @@ public class DijkstraRouteEnquiry implements IRouteEnquiry
             public int compare(INode left, INode right)
             {
                 // note that this trick doesn't work for huge distances, close to Integer.MAX_VALUE
-                
             	int result = getShortestDistance(left) - getShortestDistance(right);
                 
                 return (result == 0) ? left.compareTo(right) : result;
@@ -238,7 +231,7 @@ public class DijkstraRouteEnquiry implements IRouteEnquiry
     		throw new NoJourneyFoundException("A route could not be found to the destination. " +
         			               "This is rather odd and suggests your network is not valid.");
         }
-    	return (LinkedList)predecessors.get(destination.getName());  // RETURNS LIST OF EDGES:  List<Edge>  [should be IPaths!!!!]
+    	return (LinkedList)predecessors.get(destination.getName());  
     } 
     
     
@@ -267,7 +260,6 @@ public class DijkstraRouteEnquiry implements IRouteEnquiry
     	}
     }
 
-
     
     private boolean containsEdge(List<Edge> edgeList, Edge uv)
     {
@@ -283,9 +275,7 @@ public class DijkstraRouteEnquiry implements IRouteEnquiry
     	return false;
     }
     
-    
-    
-    
+        
     
     
     /**
@@ -335,17 +325,7 @@ public class DijkstraRouteEnquiry implements IRouteEnquiry
         return (d == null) ? INFINITE_DISTANCE : d;
     }
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+  
     
     
 }

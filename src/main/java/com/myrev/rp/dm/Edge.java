@@ -3,16 +3,12 @@ import java.util.List;
 import com.myrev.rp.engine.INode;
 import com.myrev.rp.engine.IPath;
 
-//import com.fdm.seminar.routeplanner.engine.*;
-
-
 public class Edge 
 {
-	INode start;
-	INode dest;
-	int weighting;
-	IPath line; 
-	
+	private INode start;
+	private INode dest;
+	private int weighting;
+	private IPath line; 
 	
 	
 	public Edge(INode start, INode dest, int weighting, IPath line)
@@ -26,30 +22,20 @@ public class Edge
 
 	public boolean equals(Edge thatEdge)
 	{
-		if (thatEdge.getStart().equals(this.start)    &&
+		return (thatEdge.getStart().equals(this.start)    &&
 				thatEdge.getDest().equals(this.dest)  &&
-				thatEdge.getLine().equals(this.line))
-		{
-			return true;
-		}
-		return false;
+				thatEdge.getLine().equals(this.line)) ? true : false; 
 	}
 	
 	
 	
 	public boolean onSamePath(Edge thatEdge)
 	{
-		if (this.line.equals(thatEdge.getLine()))
-		{
-			return true;
-		}
-		
-		return false;
+		return (this.line.equals(thatEdge.getLine())) ? true : false; 
 	}
 	
 	
-	
-	
+	// TODO refactor
 	public boolean freshEdge(List edgeList)
 	{
 		for (int i = 0; i < edgeList.size(); i++)
@@ -65,6 +51,7 @@ public class Edge
 	}
 	
 	
+	// TODO refactor
 	public boolean listContainsEdge(List edgeList)
 	{
 		for (int i = 0; i < edgeList.size(); i++)
@@ -100,17 +87,14 @@ public class Edge
 	}
 
 
-
 	public void setDest(INode dest) {
 		this.dest = dest;
 	}
 
 
-
 	public int getWeighting() {
 		return weighting;
 	}
-
 
 
 	public void setWeighting(int weighting) {
@@ -120,8 +104,5 @@ public class Edge
 	public IPath getLine() {
 		return line;
 	}
-
-	
-
 
 }

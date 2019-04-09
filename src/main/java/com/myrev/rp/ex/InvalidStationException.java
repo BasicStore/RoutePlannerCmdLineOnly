@@ -2,28 +2,9 @@ package com.myrev.rp.ex;
 
 public class InvalidStationException extends Exception
 {
-
-	String message;
-	
-	
-	public InvalidStationException()
+	public InvalidStationException(String msg)
 	{
-		super("Invalid Station Exception");
+		super(msg);
 	}
-	
-
-	public InvalidStationException(String message)
-	{
-		super("Invalid Station Exception");
-		this.message = message;
-	}
-
-	public String getMessage()
-	{
-		return message;
-	}
-	
-	
-	
 	
 }

@@ -16,8 +16,6 @@ public class Neighbour
 		this.weighting = weighting;
 		this.line = line;
 	}
-
-	
 	
 	
 	// iNode equality only, not path
@@ -31,8 +29,7 @@ public class Neighbour
 		
 		return false;
 	}
-	
-	
+		
 	
 	// iNode and lineName equality
 	public boolean deepEquals(INode thatNode, IPath line)
@@ -93,8 +90,5 @@ public class Neighbour
 		this.line = line;
 	}
 
-
-	
-	
 	
 }

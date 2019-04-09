@@ -1,5 +1,4 @@
 package com.myrev.rp.dm;
-//import com.fdm.seminar.routeplanner.engine.*;
 import java.util.LinkedList;
 import java.util.List;
 import com.myrev.rp.engine.INode;
@@ -7,10 +6,8 @@ import com.myrev.rp.engine.INode;
 
 public class Route 
 {
-	// referred to as LinkedList to enable use of addFirst() method, not contained in List api
-	LinkedList<Edge> edgeList;
-	List<Edge> summaryLegs;
-	
+	private LinkedList<Edge> edgeList;
+	private List<Edge> summaryLegs;
 	
 	
 	public Route(LinkedList<Edge> edgeList) 
@@ -27,6 +24,7 @@ public class Route
 	}
 	
 	
+	// TODO refactor
 	public int getTotalWeighting()
 	{
 		int totalWeighting = 0;
@@ -40,7 +38,7 @@ public class Route
 	
 	
 	
-	
+	// TODO refactor
 	public INode getEarliestNode()
 	{
 		if (edgeList.size() == 0)
@@ -54,13 +52,11 @@ public class Route
 		return currentStart;
 	}
 	
-	
-	
+			
 	public String getStartNodeName()
 	{
 		Edge startEdge = (Edge)edgeList.get(0);
 		INode startNode = startEdge.getStart();
-		
 		return startNode.getName();
 	}
 	
@@ -80,9 +76,9 @@ public class Route
 		INode destNode = lastEdge.getDest();
 		return destNode;
 	}
+		
 	
-	
-	
+	// TODO refactor
 	public String toString()
 	{
 		String output = "";
@@ -101,12 +97,10 @@ public class Route
 		return output;
 	}
 	
-	
-	
+		
 	private Route clear() 
     {
-   	 	return null;
-   	 	 
+   	 	return null;   	 	 
     }
 	
 	
@@ -114,8 +108,6 @@ public class Route
 	{
 		this.edgeList.addFirst(edge);
 	}
-	
-	
 	
 	
 	public void addEdgeLast(Edge edge)
@@ -134,21 +126,14 @@ public class Route
 	}
 
 
-
-
 	public LinkedList<Edge> getSummaryLegs() {
 		return (LinkedList)summaryLegs;
 	}
 
 
-
-
 	public void setSummaryLegs(List<Edge> summaryLegs) {
 		this.summaryLegs = summaryLegs;
 	}
-
-
-
 
 	public void setEdgeList(LinkedList<Edge> edgeList) {
 		this.edgeList = edgeList;
