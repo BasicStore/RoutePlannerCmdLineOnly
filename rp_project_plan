@@ -9,7 +9,7 @@ STAGE 1: UPDATE CORE ROUTE FINDER CODE [2009 code]
 - OK clean commented out code and identify some of the 
      particularly obvious faults with TODOs 
 
-- ok identify and implement where code code be better organized
+- OK identify and implement where code code be better organized
   
 - there could be better user input validation & processing, 
   converting input to upper case
@@ -34,6 +34,12 @@ STAGE 2: DESIGN
 
 - map functionality, logic and conditions at each step
 
+- there maybe a serious design flaw with ticket zones.
+  How are they used? Is consideration taken over the fact that
+  some stations are in more than 1 zone?! 
+
+- add constraints to ddl 
+
 - document features and areas of extension:
   - motorway network
   - alternative to Djikstra
@@ -57,8 +63,6 @@ STAGE 3: SHELLS
 - test stubs
 - initial javadocs
 - css + js plugged in
-- threadpools for jobs
-- profiling utility of some sort
 
 ----------------------------------------------------
 STAGE 4: STRUCTURAL IMPLEMENTATION
@@ -77,4 +81,33 @@ STAGE 5: BEAUTIFY
 - update the application front ends
 
 ----------------------------------------------------
+STAGE 6: 
+
+- setup liquibase or some database versioning tool 
+- setup a reporting facility with JasperReports
+- threadpools for jobs
+- profiling utility of some sort
+
+----------------------------------------------------
+
+
+- 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
