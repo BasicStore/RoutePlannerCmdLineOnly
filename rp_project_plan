@@ -5,6 +5,14 @@ STAGE 1: UPDATE CORE ROUTE FINDER CODE
 - get the old actual routefinder functionality working from the 
   command line
 
+- address some of the particularly obvious faults, especially
+  code organization 
+
+- identify basic issues:
+  it is not clear why only one list is returned from DJikstra
+
+- implement for spring...loggin, properties, di etc
+
 - identify tests, improvements and j8 constructs and other
   work that needs doing
 

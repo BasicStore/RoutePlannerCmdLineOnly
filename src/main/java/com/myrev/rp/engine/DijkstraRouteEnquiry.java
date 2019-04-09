@@ -68,7 +68,6 @@ public class DijkstraRouteEnquiry implements IRouteEnquiry
     /**
      * The currently known shortest distance for all cities.
      */
-    //private final Map<INode, Integer> shortestDistances = new HashMap<INode, Integer>();
     private final Map<String, Integer> shortestDistances = new HashMap<String, Integer>();
 
     /**
@@ -231,7 +230,7 @@ public class DijkstraRouteEnquiry implements IRouteEnquiry
      * @return the city leading to the given city on the shortest path, or
      * <code>null</code> if there is no route to the destination.
      */
-    public LinkedList getPredecessorList(INode iNode) throws NoJourneyFoundException
+    public LinkedList getPredecessorList(INode destination) throws NoJourneyFoundException
     {
         if (!predecessors.containsKey(destination.getName()))  
         {
@@ -239,10 +238,8 @@ public class DijkstraRouteEnquiry implements IRouteEnquiry
     		throw new NoJourneyFoundException("A route could not be found to the destination. " +
         			               "This is rather odd and suggests your network is not valid.");
         }
-    	return (LinkedList)predecessors.get(iNode.getName());
-    }
-    
-    
+    	return (LinkedList)predecessors.get(destination.getName());  // RETURNS LIST OF EDGES:  List<Edge>  [should be IPaths!!!!]
+    } 
     
     
     

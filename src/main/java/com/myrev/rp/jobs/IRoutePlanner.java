@@ -12,9 +12,6 @@ import com.myrev.rp.ex.InvalidStationException;
 import com.myrev.rp.ex.NoJourneyFoundException;
 
 
-
-
-
 public interface IRoutePlanner 
 {
 
