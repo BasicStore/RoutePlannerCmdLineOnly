@@ -2,7 +2,8 @@ package com.myrev.rp.lu.dm;
 import java.util.LinkedList;
 import java.util.List;
 import com.myrev.rp.dm.Edge;
-import com.myrev.rp.engine.INode;
+import com.myrev.rp.dm.INode;
+import com.myrev.rp.dm.Neighbour;
 
 
 public class Station implements INode

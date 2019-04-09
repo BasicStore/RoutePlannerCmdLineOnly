@@ -9,15 +9,15 @@ STAGE 1: UPDATE CORE ROUTE FINDER CODE [2009 code]
 - OK clean commented out code and identify some of the 
      particularly obvious faults with TODOs 
 
-- identify and implement where code code be better organized
-  --> principle concern is the location of IPath etc 
-
+- ok identify and implement where code code be better organized
+  
 - there could be better user input validation & processing, 
   converting input to upper case
 
+- draw up basic model diagram
+
 - identify tests, improvements and j8 constructs and other
   work that needs doing
-
 
 - implement updates
 

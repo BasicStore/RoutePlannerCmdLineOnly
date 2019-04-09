@@ -1,8 +1,6 @@
-package com.myrev.rp.engine;
+package com.myrev.rp.dm;
 import java.util.LinkedList;
 import java.util.List;
-import com.myrev.rp.dm.Edge;
-import com.myrev.rp.lu.dm.Neighbour;
 
 public interface INode 
 {

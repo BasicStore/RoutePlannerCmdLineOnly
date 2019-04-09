@@ -1,5 +1,5 @@
 package com.myrev.rp.lu.dm;
-import com.myrev.rp.engine.IPath;
+import com.myrev.rp.dm.IPath;
 
 public class Line implements IPath
 {

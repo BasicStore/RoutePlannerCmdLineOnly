@@ -1,12 +1,12 @@
-package com.myrev.rp.jobs;
+package com.myrev.rp.output;
 import java.util.List;
 
 import org.apache.commons.lang3.StringUtils;
 import com.myrev.rp.dm.Edge;
+import com.myrev.rp.dm.INode;
+import com.myrev.rp.dm.IPath;
 import com.myrev.rp.dm.Journey;
 import com.myrev.rp.dm.Route;
-import com.myrev.rp.engine.INode;
-import com.myrev.rp.engine.IPath;
 
 public class EnquiryOutput 
 {
@@ -16,7 +16,7 @@ public class EnquiryOutput
 	}
 	
 	
-	protected String getJourneyOutput(Journey journey, boolean htmlPage)
+	public String getJourneyOutput(Journey journey, boolean htmlPage)
 	{
 		String output = StringUtils.EMPTY;
 		List<Route> routeList = journey.getRouteList();

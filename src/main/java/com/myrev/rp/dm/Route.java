@@ -1,7 +1,6 @@
 package com.myrev.rp.dm;
 import java.util.LinkedList;
 import java.util.List;
-import com.myrev.rp.engine.INode;
 
 
 public class Route 

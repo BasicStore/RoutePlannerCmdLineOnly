@@ -1,12 +1,12 @@
-package com.myrev.rp.jobs;
+package com.myrev.rp.engine;
 import java.util.LinkedList;
 import java.util.List;
 import com.myrev.rp.dm.Edge;
+import com.myrev.rp.dm.INode;
+import com.myrev.rp.dm.IPath;
+import com.myrev.rp.dm.IRouteMap;
 import com.myrev.rp.dm.Journey;
 import com.myrev.rp.dm.Route;
-import com.myrev.rp.engine.INode;
-import com.myrev.rp.engine.IPath;
-import com.myrev.rp.engine.IRouteMap;
 
 
 // - Organises data in leg format, ie. for each succession of nodes on an IPath, and stores that in a Journey

@@ -1,7 +1,5 @@
 package com.myrev.rp.dm;
 import java.util.List;
-import com.myrev.rp.engine.INode;
-import com.myrev.rp.engine.IPath;
 
 public class Edge 
 {

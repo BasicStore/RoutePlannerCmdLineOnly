@@ -1,4 +1,4 @@
-package com.myrev.rp.jobs;
+package com.myrev.rp.engine;
 import java.io.IOException;
 import java.util.Collections;
 import java.util.LinkedList;
@@ -6,15 +6,14 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 import com.myrev.rp.dm.Edge;
+import com.myrev.rp.dm.INode;
+import com.myrev.rp.dm.IRouteMap;
 import com.myrev.rp.dm.Journey;
 import com.myrev.rp.dm.Route;
-import com.myrev.rp.engine.DijkstraRouteEnquiry;
-import com.myrev.rp.engine.INode;
-import com.myrev.rp.engine.IRouteEnquiry;
-import com.myrev.rp.engine.IRouteMap;
 import com.myrev.rp.ex.DuplicateStationException;
 import com.myrev.rp.ex.InvalidStationException;
 import com.myrev.rp.ex.NoJourneyFoundException;
+import com.myrev.rp.output.EnquiryOutput;
 import org.apache.log4j.Logger;
 
 

@@ -1,7 +1,4 @@
-package com.myrev.rp.lu.dm;
-import com.myrev.rp.engine.INode;
-import com.myrev.rp.engine.IPath;
-
+package com.myrev.rp.dm;
 
 public class Neighbour 
 {

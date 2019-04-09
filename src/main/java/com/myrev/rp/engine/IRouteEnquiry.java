@@ -1,5 +1,7 @@
 package com.myrev.rp.engine;
 import java.util.LinkedList;
+
+import com.myrev.rp.dm.INode;
 import com.myrev.rp.ex.NoJourneyFoundException;
 
 
